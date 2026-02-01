@@ -448,7 +448,8 @@ export const EditProductPage = () => {
         available_colors: formData.availableColors,
         sizes: formData.sizes,
         price: formData.price,
-        is_new_arrival: formData.isFreshArrival,
+        is_new_arrival: formData.isFreshArrivalTag,
+        show_in_fresh_arrivals: formData.showInFreshArrivals,
         images: formData.images.map(img => ({
           url: img.url,
           is_primary: img.is_primary
