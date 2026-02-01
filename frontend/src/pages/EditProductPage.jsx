@@ -850,26 +850,25 @@ export const EditProductPage = () => {
               </div>
             )}
 
-            {/* Step 8: Fresh Arrivals */}
+            {/* Step 8: Fresh Arrival Tag */}
             {currentStep === 8 && (
-              <div className="step-content" data-testid="step-fresh-arrivals">
+              <div className="step-content" data-testid="step-fresh-arrival-tag">
                 <p className="step-instruction">
-                  Do you want to add the "Fresh Arrivals" tag to this product?
+                  Do you want to add the "Fresh Arrival" tag to this product?
                 </p>
                 
                 <div className="switch-container">
                   <Switch
-                    checked={formData.isFreshArrival}
-                    onCheckedChange={(checked) => setFormData({ ...formData, isFreshArrival: checked })}
-                    data-testid="fresh-arrival-switch"
+                    checked={formData.isFreshArrivalTag}
+                    onCheckedChange={(checked) => setFormData({ ...formData, isFreshArrivalTag: checked })}
+                    data-testid="fresh-arrival-tag-switch"
                   />
-                  <Label>Add to Fresh Arrivals</Label>
+                  <Label>Add "Fresh Arrival" Tag</Label>
                 </div>
 
-                {formData.isFreshArrival && (
+                {formData.isFreshArrivalTag && (
                   <div className="fresh-arrival-info">
-                    <p>✓ Product will be tagged as "Fresh Arrival"</p>
-                    <p>✓ Product will appear in the Fresh Arrivals section on homepage</p>
+                    <p>✓ Product will display a "Fresh Arrival" tag on its card</p>
                   </div>
                 )}
               </div>
