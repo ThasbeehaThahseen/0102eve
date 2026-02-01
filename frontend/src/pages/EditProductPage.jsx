@@ -424,7 +424,7 @@ export const EditProductPage = () => {
     if (currentStep > 0) {
       // If editing from preview, return to preview instead of previous step
       if (editingFromPreview) {
-        setCurrentStep(9);
+        setCurrentStep(10);
         setEditingFromPreview(false);
       } else {
         setCurrentStep(currentStep - 1);
