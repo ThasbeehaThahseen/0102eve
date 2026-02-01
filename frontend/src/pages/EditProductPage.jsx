@@ -390,7 +390,9 @@ export const EditProductPage = () => {
         return formData.detailedDescription !== '';
       case 7: // Price
         return formData.price > 0;
-      case 8: // Fresh Arrivals
+      case 8: // Fresh Arrival Tag
+        return true;
+      case 9: // Show in Fresh Arrivals
         return true;
       default:
         return true;
