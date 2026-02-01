@@ -874,8 +874,32 @@ export const EditProductPage = () => {
               </div>
             )}
 
-            {/* Step 9: Preview */}
+            {/* Step 9: Show in Fresh Arrivals Section */}
             {currentStep === 9 && (
+              <div className="step-content" data-testid="step-show-in-fresh-arrivals">
+                <p className="step-instruction">
+                  Do you want this product to appear in the "Fresh Arrivals" section on the homepage?
+                </p>
+                
+                <div className="switch-container">
+                  <Switch
+                    checked={formData.showInFreshArrivals}
+                    onCheckedChange={(checked) => setFormData({ ...formData, showInFreshArrivals: checked })}
+                    data-testid="show-in-fresh-arrivals-switch"
+                  />
+                  <Label>Show in Fresh Arrivals Section</Label>
+                </div>
+
+                {formData.showInFreshArrivals && (
+                  <div className="fresh-arrival-info">
+                    <p>✓ Product will appear in the Fresh Arrivals section on the homepage</p>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Step 10: Preview */}
+            {currentStep === 10 && (
               <div className="step-content preview-content" data-testid="step-preview">
                 <h3>Product Preview</h3>
                 <p className="preview-instruction">Review all details before publishing</p>
