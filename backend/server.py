@@ -228,7 +228,7 @@ class ProductUpdate(BaseModel):
     fabric: Optional[str] = None
     primary_color: Optional[str] = None
     available_colors: Optional[List[str]] = None
-    sizes: Optional[str] = None
+    sizes: Optional[List[str]] = None
     price: Optional[float] = None
     description: Optional[str] = None
     is_new_arrival: Optional[bool] = None
