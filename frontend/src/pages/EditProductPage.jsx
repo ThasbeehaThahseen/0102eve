@@ -1002,12 +1002,22 @@ export const EditProductPage = () => {
 
                 <div className="preview-section">
                   <div className="preview-header">
-                    <h4>Fresh Arrival Status</h4>
-                    <Button size="sm" variant="ghost" onClick={() => handleEditFromPreview(8)} data-testid="edit-fresh-arrival">
+                    <h4>Fresh Arrival Tag</h4>
+                    <Button size="sm" variant="ghost" onClick={() => handleEditFromPreview(8)} data-testid="edit-fresh-arrival-tag">
                       <Edit2 size={16} /> Edit
                     </Button>
                   </div>
-                  <p>{formData.isFreshArrival ? 'Yes - Tagged as Fresh Arrival' : 'No'}</p>
+                  <p>{formData.isFreshArrivalTag ? 'Yes - Tag will be shown on product card' : 'No'}</p>
+                </div>
+
+                <div className="preview-section">
+                  <div className="preview-header">
+                    <h4>Show in Fresh Arrivals Section</h4>
+                    <Button size="sm" variant="ghost" onClick={() => handleEditFromPreview(9)} data-testid="edit-show-in-fresh-arrivals">
+                      <Edit2 size={16} /> Edit
+                    </Button>
+                  </div>
+                  <p>{formData.showInFreshArrivals ? 'Yes - Will appear on homepage' : 'No'}</p>
                 </div>
 
                 <Button 
